@@ -290,7 +290,7 @@ begin
     arq.Text := '';
     arq.SaveToFile(ExtractFilePath(Application.ExeName) + 'email.json');
   end;
-
+end;
 
 procedure TfrmPrincipal.LimparCampos;
 begin
