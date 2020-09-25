@@ -1,0 +1,141 @@
+object frmConfigEmail: TfrmConfigEmail
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Configura'#231#245'es E-mail'
+  ClientHeight = 266
+  ClientWidth = 264
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object btnSalvar: TButton
+    Left = 174
+    Top = 225
+    Width = 75
+    Height = 25
+    Caption = 'Salvar'
+    TabOrder = 0
+    OnClick = btnSalvarClick
+  end
+  object Button2: TButton
+    Left = 93
+    Top = 225
+    Width = 75
+    Height = 25
+    Caption = 'Limpar'
+    TabOrder = 1
+    OnClick = Button2Click
+  end
+  object edtHostSMTP: TLabeledEdit
+    Left = 16
+    Top = 32
+    Width = 233
+    Height = 21
+    EditLabel.Width = 51
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Host SMTP'
+    TabOrder = 2
+  end
+  object edtPorta: TLabeledEdit
+    Left = 16
+    Top = 70
+    Width = 233
+    Height = 21
+    EditLabel.Width = 26
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Porta'
+    TabOrder = 3
+  end
+  object edtUsuarioSMTP: TLabeledEdit
+    Left = 16
+    Top = 109
+    Width = 233
+    Height = 21
+    EditLabel.Width = 65
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Usu'#225'rio SMTP'
+    TabOrder = 4
+  end
+  object edtSenha: TLabeledEdit
+    Left = 16
+    Top = 150
+    Width = 204
+    Height = 21
+    EditLabel.Width = 30
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Senha'
+    PasswordChar = '*'
+    TabOrder = 5
+  end
+  object Protocolo: TRadioGroup
+    Left = 16
+    Top = 181
+    Width = 233
+    Height = 38
+    Caption = 'Protocolo'
+    TabOrder = 6
+  end
+  object rbTLS: TRadioButton
+    Left = 46
+    Top = 196
+    Width = 41
+    Height = 17
+    Caption = 'TLS'
+    TabOrder = 7
+  end
+  object rbSSL: TRadioButton
+    Left = 156
+    Top = 196
+    Width = 64
+    Height = 17
+    Caption = 'SSL'
+    Checked = True
+    TabOrder = 8
+    TabStop = True
+  end
+  object btnVisualizar: TBitBtn
+    Left = 222
+    Top = 150
+    Width = 27
+    Height = 21
+    Glyph.Data = {
+      36030000424D3603000000000000360000002800000010000000100000000100
+      18000000000000030000C40E0000C40E00000000000000000000FFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9F9F9BABABA93
+      9393939393BABABAF9F9F9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFF8F8F88484845858589E9E9EC8C8C8C8C8C89E9E9E585858848484F8F8
+      F8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC2C2C2545454C0C0C0FFFFFF9B9B9B5A
+      5A5A5A5A5A9B9B9BFFFFFFC0C0C0545454C2C2C2FFFFFFFFFFFFFFFFFFB5B5B5
+      575757F6F6F6FFFFFF9A9A9A909090FFFFFFFFFFFF8F8F8F9B9B9BFFFFFFF6F6
+      F6565656B6B6B6FFFFFFAEAEAE6B6B6BFCFCFCFFFFFFFFFFFF5A5A5AFFFFFFFF
+      FFFFFFFFFFFFFFFF5A5A5AFFFFFFFFFFFFFCFCFC6A6A6AAEAEAEAEAEAE6B6B6B
+      FCFCFCFFFFFFFFFFFF5A5A5AFFFFFFFFFFFFFFFFFFFFFFFF5A5A5AFFFFFFFFFF
+      FFFCFCFC6B6B6BAEAEAEFFFFFFB4B4B4575757F6F6F6FFFFFF9A9A9A909090FF
+      FFFFFFFFFF9090909B9B9BFFFFFFF6F6F6565656B5B5B5FFFFFFFFFFFFFFFFFF
+      C1C1C1545454C1C1C1FFFFFF9A9A9A5A5A5A5A5A5A9A9A9AFFFFFFC1C1C15454
+      54C2C2C2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8F8F88383835858589E9E9EC9
+      C9C9C9C9C99E9E9E585858838383F8F8F8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFF8F8F8B9B9B9939393939393B9B9B9F8F8F8FFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+    TabOrder = 9
+    OnClick = btnVisualizarClick
+  end
+end

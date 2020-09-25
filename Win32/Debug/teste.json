@@ -1,0 +1,8 @@
+{
+"hostsmtp":"1",
+"usuariosmtp":"3",
+"senha":"4",
+"ssl":false,
+"tls":false,
+"porta":"2"
+}	
