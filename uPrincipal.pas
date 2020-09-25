@@ -84,7 +84,7 @@ end;
 procedure TfrmPrincipal.AjustaParametrosDeEnvio;
 begin
   mmAssunto.Clear;
-  mmAssunto.Lines.Add('ParabÈns Sr(a). ' + edtNome.Text +
+  mmAssunto.Lines.Add('Parab√©ns Sr(a). ' + edtNome.Text +
     ' seu cadastro foi efetuado com sucesso! ');
 
   ACBrMail1.From := frmConfigEmail.edtUsuarioSMTP.Text;
@@ -248,7 +248,7 @@ procedure TfrmPrincipal.edtCPFExit(Sender: TObject);
 begin
   if not ValidarCPF(edtCPF.Text) then
   begin
-    ShowMessage('CPF Inv·lido!');
+    ShowMessage('CPF Inv√°lido!');
     edtCPF.Clear;
   end;
 end;
@@ -281,10 +281,16 @@ begin
 end;
 
 procedure TfrmPrincipal.FormShow(Sender: TObject);
+var
+  arq: TStringList;
 begin
-  edtNome.SetFocus;
-  CarregarCodigo;
-end;
+  if not(FileExists(ExtractFilePath(Application.ExeName) + 'email.json')) then
+  begin
+    arq := TStringList.Create;
+    arq.Text := '';
+    arq.SaveToFile(ExtractFilePath(Application.ExeName) + 'email.json');
+  end;
+
 
 procedure TfrmPrincipal.LimparCampos;
 begin
