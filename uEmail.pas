@@ -102,28 +102,31 @@ begin
   jsonValue := TJSONObject.ParseJSONValue(lista.Text);
   jsonObject := jsonValue as TJSONObject;
 
-  for par in jsonObject do
+  if lista.Text <> '' then
   begin
-    if par.jsonString.Value = 'hostsmtp' then
-      ConfigEmail.Hostsmtp := par.jsonValue.Value;
-    if par.jsonString.Value = 'usuariosmtp' then
-      ConfigEmail.Usuariosmtp := par.jsonValue.Value;
-    if par.jsonString.Value = 'senha' then
-      ConfigEmail.Senha := par.jsonValue.Value;
-    if par.jsonString.Value = 'porta' then
-      ConfigEmail.Porta := par.jsonValue.Value;
-    if par.jsonString.Value = 'ssl' then
-      ConfigEmail.Ssl := StrToBool(par.jsonValue.Value);
-    if par.jsonString.Value = 'tls' then
-      ConfigEmail.Tls := StrToBool(par.jsonValue.Value);
+    for par in jsonObject do
+    begin
+      if par.jsonString.Value = 'hostsmtp' then
+        ConfigEmail.Hostsmtp := par.jsonValue.Value;
+      if par.jsonString.Value = 'usuariosmtp' then
+        ConfigEmail.Usuariosmtp := par.jsonValue.Value;
+      if par.jsonString.Value = 'senha' then
+        ConfigEmail.Senha := par.jsonValue.Value;
+      if par.jsonString.Value = 'porta' then
+        ConfigEmail.Porta := par.jsonValue.Value;
+      if par.jsonString.Value = 'ssl' then
+        ConfigEmail.Ssl := StrToBool(par.jsonValue.Value);
+      if par.jsonString.Value = 'tls' then
+        ConfigEmail.Tls := StrToBool(par.jsonValue.Value);
+    end;
+    
+    edtHostSMTP.Text := ConfigEmail.Hostsmtp;
+    edtUsuarioSMTP.Text := ConfigEmail.Usuariosmtp;
+    edtSenha.Text := ConfigEmail.Senha;
+    edtPorta.Text := ConfigEmail.Porta;
+    rbSSL.Checked := ConfigEmail.Ssl;
+    rbTLS.Checked := ConfigEmail.Tls;
   end;
-
-  edtHostSMTP.Text := ConfigEmail.Hostsmtp;
-  edtUsuarioSMTP.Text := ConfigEmail.Usuariosmtp;
-  edtSenha.Text := ConfigEmail.Senha;
-  edtPorta.Text := ConfigEmail.Porta;
-  rbSSL.Checked := ConfigEmail.Ssl;
-  rbTLS.Checked := ConfigEmail.Tls;
 end;
 
 procedure TfrmConfigEmail.FormCreate(Sender: TObject);
