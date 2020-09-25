@@ -131,7 +131,7 @@ end;
 
 procedure TfrmConfigEmail.FormCreate(Sender: TObject);
 begin
-  Carregar;
+  //Carregar;
 end;
 
 procedure TfrmConfigEmail.FormShow(Sender: TObject);
